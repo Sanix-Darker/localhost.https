@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN apk add --no-cache openssl socat
 
 # copy our startup script
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY s.sh /s.sh
+RUN chmod +x /s.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/s.sh"]
